@@ -1,6 +1,5 @@
 const form = document.getElementById('search-bar');
 const input = document.getElementById('search-input');
-const searchButton = document.getElementById('search-button');
 const loading = document.getElementById('loading');
 const results = document.getElementById('results');
 
@@ -20,6 +19,7 @@ const createPlaceholder = () => {
 const searchBooks = async () => {
     const query = input.value.trim();
     if (query === '') return;
+    input.value = '';
 
     results.innerHTML = '';
     const api = `https://openlibrary.org/search.json?q=${encodeURIComponent(query)}`;
@@ -72,6 +72,6 @@ const searchBooks = async () => {
 
 form.addEventListener('submit', (event)=> {
     event.preventDefault()
+    console.log('submit');
     searchBooks();
-    input.value = '';
 });
