@@ -1,3 +1,4 @@
+const form = document.getElementById('search-bar');
 const input = document.getElementById('search-input');
 const searchButton = document.getElementById('search-button');
 const loading = document.getElementById('loading');
@@ -67,6 +68,10 @@ const searchBooks = async () => {
         li.appendChild(info);
         results.appendChild(li);
     }
-    
 }
-searchButton.addEventListener('click', searchBooks);
+
+form.addEventListener('submit', (event)=> {
+    event.preventDefault()
+    searchBooks();
+    input.value = '';
+});
