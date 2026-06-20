@@ -1,0 +1,166 @@
+@keyframes pulseColorsBook{
+    0% {
+        color: #00fce2;
+        text-shadow:
+                0 0 4px #00ceb3,
+                0 0 12px #009181,
+                0 0 30px #00493a;
+    }
+    50% {
+        color: #ff0000;
+        text-shadow:
+                0 0 4px #e10000,
+                0 0 12px #d30000,
+                0 0 30px #c20000;
+    }
+    100% {
+        color: #00fce2;
+        text-shadow:
+                0 0 4px #00ceb3,
+                0 0 12px #009181,
+                0 0 30px #00493a;
+    }
+}
+
+@keyframes pulseColorsSearch{
+    0% {
+        color: #ff0000;
+        text-shadow:
+                0 0 4px #e10000,
+                0 0 12px #d30000,
+                0 0 30px #c20000;
+    }
+    50% {
+        color: #00fce2;
+        text-shadow:
+                0 0 4px #00e8c8,
+                0 0 12px #01dabd,
+                0 0 30px #00493a;
+    }
+    100% {
+        color: #ff0000;
+        text-shadow:
+                0 0 4px #e10000,
+                0 0 12px #d30000,
+                0 0 30px #c20000;
+    }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Tilt Neon', cursive;
+    
+}
+
+span {
+    white-space: pre-line;
+}
+
+i {
+    font-size: 20px;
+}
+
+strong {
+    font-size: 20px;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 100px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.title {
+    font-family: 'Neonderthaw', cursive;
+    font-size: 90px;
+    font-weight: 900;
+}
+
+.title-Book {
+    animation: pulseColorsBook 20s infinite alternate;
+}
+
+.title-Search {
+    animation: pulseColorsSearch 20s infinite alternate;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-input {
+    padding: 10px;
+    border-radius: 150px;
+}
+
+.search-button {
+    padding: 10px;
+    border-radius: 150px;
+}
+
+.body {
+    color: #00fce2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 15px;
+}
+
+.results-title {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.book-title {
+    font-style: italic;
+}
+
+.cover,
+.placeholder {
+    width: 80px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.placeholder {
+    fill: #000;
+    stroke: rgb(108 117 125 / 0.56);
+    stroke-width: 1px;
+    
+}
